@@ -1,4 +1,4 @@
-<center>
+<div align="center">
 
 # Minimalistic Express Boilerplate with TypeScript and Live Debugging
 
@@ -6,7 +6,7 @@
 
 ## Perfect for microservices.
 
-</center>
+</div>
 
 ---
 
