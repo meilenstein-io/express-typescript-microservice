@@ -1,7 +1,7 @@
 import { Router } from "express";
-// *added* import for weather route
-import Weather from "./weather";
+import { weatherController } from "./weather";
 const router = Router();
-// *change here to address routes*
-router.use("/weather", Weather);
+
+router.use("/weather", weatherController);
+
 export default router;

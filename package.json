@@ -1,22 +1,19 @@
 {
-  "name": "project",
-  "version": "1.0.0",
+  "name": "express-typescript-microservice",
+  "version": "0.0.1",
   "description": "",
   "main": "./dist/server.js",
   "scripts": {
-    "start": "npm run build && npm run watch",
-    "build": "rm -rf ./dist/* && npm run build-ts && npm run tslint",
-
+    "start": "yarn build && yarn watch",
+    "build": "rm -rf ./dist/* && yarn build-ts && yarn tslint",
     "watch-node": "nodemon ./dist/server.js",
     "watch-ts": "tsc -w",
-    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,green.bold\"  \"npm run watch-ts\" \"npm run watch-node\"",
-    
+    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,green.bold\"  \"yarn watch-ts\" \"yarn watch-node\"",
     "build-ts": "tsc",
     "tslint": "tslint -c tslint.json -p tsconfig.json"
-
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Hendrik Gaffo <hendrik.gaffo@meilenstein.io>",
+  "license": "MIT",
   "devDependencies": {
     "@types/body-parser": "^1.17.0",
     "@types/cors": "^2.8.4",
@@ -28,7 +25,8 @@
   },
   "dependencies": {
     "body-parser": "^1.18.3",
-    "cors": "^2.8.4",
+    "concurrently": "^4.1.0",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "request": "^2.88.0"
   }

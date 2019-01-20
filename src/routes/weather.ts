@@ -1,9 +1,9 @@
-import express = require("express");
+import * as express from "express";
 import { Request, Response } from "express";
 
-const router = express.Router();
+export const weatherController = express.Router();
 
-router.get("/:city", (req: Request, res: Response) => {
+weatherController.get("/:city", (req: Request, res: Response) => {
   const city: string = req.params.city;
 
   if (!city) {
@@ -41,5 +41,3 @@ router.get("/:city", (req: Request, res: Response) => {
     return res.json(result);
   }
 });
-
-export default router;

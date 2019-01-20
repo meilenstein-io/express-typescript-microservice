@@ -1,6 +1,27 @@
-# nodejs-express-typescript-scaffold
-This is scaffold for a project structured with Nodejs, Express and Typescript which live debugging is enabled.
+# Minimalistic Express Boilerplate with TypeScript and Live Debugging
 
-please refer to this article :
+## Perfect for microservices.
 
-https://medium.com/@sunnystatue/setup-nodejs-express-typescript-project-enabled-live-edit-when-debugging-4fea0f51dbb3
+---
+
+### Configured:
+
+- NodeJS
+- Express
+- TypeScript
+- Live Debugging
+
+### Pre-Installed:
+
+- Body-Parser
+- CORS
+
+### Getting Started:
+
+```node
+// install the npm modules
+yarn install
+
+// start the live server
+yarn start
+```
