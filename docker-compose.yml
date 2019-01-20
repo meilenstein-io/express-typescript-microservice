@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  express-typescript-microservice:
+    image: express-typescript-microservice
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: express-typescript-microservice
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000

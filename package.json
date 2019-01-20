@@ -6,6 +6,10 @@
   "scripts": {
     "start": "yarn build && yarn watch",
     "build": "rm -rf ./dist/* && yarn build-ts && yarn tslint",
+    "docker:build": "docker build . -t express-typescript-microservice",
+    "docker:setup": "yarn install && yarn docker:build && docker-compose up -d",
+    "docker:start": "docker-compose start",
+    "docker:stop": "docker-compose stop",
     "watch-node": "nodemon ./dist/server.js",
     "watch-ts": "tsc -w",
     "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,green.bold\"  \"yarn watch-ts\" \"yarn watch-node\"",
@@ -14,20 +18,21 @@
   },
   "author": "Hendrik Gaffo <hendrik.gaffo@meilenstein.io>",
   "license": "MIT",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
     "@types/body-parser": "^1.17.0",
     "@types/cors": "^2.8.4",
     "@types/express": "^4.16.0",
     "@types/request": "^2.48.0",
-    "tslint": "^5.11.0",
-    "tslint-config-prettier": "^1.15.0",
-    "typescript": "^3.1.6"
-  },
-  "dependencies": {
     "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
     "cors": "^2.8.5",
     "express": "^4.16.4",
-    "request": "^2.88.0"
+    "nodemon": "^1.18.9",
+    "request": "^2.88.0",
+    "tsc": "^1.20150623.0",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.15.0",
+    "typescript": "^3.1.6"
   }
 }
