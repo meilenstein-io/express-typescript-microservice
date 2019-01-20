@@ -1,6 +1,6 @@
 import express from "express";
 import * as bodyParser from "body-parser"; // used to parse the form data that you pass in the request
-import routes from "./routes";
+import routes from "./router";
 import cors from "cors";
 
 class App {
