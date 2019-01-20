@@ -1,10 +1,16 @@
+<center>
+
 # Minimalistic Express Boilerplate with TypeScript and Live Debugging
+
+<img src="express-typescript-microservice.png" />
 
 ## Perfect for microservices.
 
+</center>
+
 ---
 
-### Configured:
+### Pre-Configured:
 
 - NodeJS
 - Express
@@ -25,3 +31,9 @@ yarn install
 // start the live server
 yarn start
 ```
+
+---
+
+### Questions?
+
+Contact us at [meilenstein.io](https://meilenstein.io)
