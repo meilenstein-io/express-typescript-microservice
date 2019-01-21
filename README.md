@@ -2,11 +2,14 @@
 
 # Minimalistic Express Boilerplate with TypeScript and Live Debugging
 
-<img src="express-typescript-microservice.png" />
+![](express-typescript-microservice.png)
 
 ## Perfect for microservices.
 
 </div>
+
+
+![](https://img.shields.io/github/issues/meilenstein-io/express-typescript-microservice.svg) ![](https://img.shields.io/github/license/meilenstein-io/express-typescript-microservice.svg) ![](https://img.shields.io/twitter/url/https/github.com/meilenstein-io/express-typescript-microservice.svg?style=social)
 
 ---
 
