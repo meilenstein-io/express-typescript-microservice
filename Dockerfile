@@ -1,7 +1,8 @@
-FROM node:10.13-alpine
-ENV NODE_ENV production
+FROM node:12.4.0-alpine
+ENV NODE_ENV development
 
 RUN apk add yarn
+RUN npm config set unsafe-perm true
 RUN npm i -g typescript tsc tslint
 
 # Create app directory
@@ -16,5 +17,5 @@ RUN yarn install
 COPY . /usr/src/app
 RUN yarn build
 
-EXPOSE 3000
-CMD yarn watch-node
+EXPOSE 8200
+CMD NODE_ENV=production yarn watch-node
