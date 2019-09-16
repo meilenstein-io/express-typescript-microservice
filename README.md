@@ -8,7 +8,6 @@
 
 </div>
 
-
 ![](https://img.shields.io/github/issues/meilenstein-io/express-typescript-microservice.svg) ![](https://img.shields.io/github/license/meilenstein-io/express-typescript-microservice.svg) ![](https://img.shields.io/twitter/url/https/github.com/meilenstein-io/express-typescript-microservice.svg?style=social)
 
 ---
@@ -19,6 +18,7 @@
 - Express
 - TypeScript
 - Live Debugging
+- Winston (Logs)
 - Docker
 - Docker-Compose
 
@@ -40,7 +40,7 @@ yarn install
 yarn start
 
 # test if it worked out:
-curl http://localhost:3000/weather/nyc
+curl http://localhost:1234/weather/nyc
 ```
 
 #### Run as Docker Container:
@@ -56,11 +56,11 @@ yarn docker:stop
 yarn docker:start
 
 # test if it worked out:
-curl http://localhost:3000/weather/nyc
+curl http://localhost:1234/weather/nyc
 ```
 
 ---
 
 ### Questions?
 
-Contact us at [meilenstein.io](https://meilenstein.io)
+Contact us at [meilenstein.io](https://meilenstein.io).
