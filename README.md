@@ -26,7 +26,8 @@
 
 - Body-Parser
 - CORS
-- Request
+- Axios
+- Lodash
 
 ### Getting Started:
 
