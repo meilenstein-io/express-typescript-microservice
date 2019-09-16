@@ -1,1 +1,1 @@
-export { weatherController } from "./weatherController";
+export { weatherController } from './weatherController';

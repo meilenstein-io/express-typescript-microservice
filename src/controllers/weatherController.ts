@@ -1,43 +1,31 @@
-import * as express from "express";
-import { Request, Response } from "express";
+import * as express from 'express';
+import _ from 'lodash';
 
 export const weatherController = express.Router();
 
-weatherController.get("/:city", (req: Request, res: Response) => {
+weatherController.get('/:city', (req: express.Request, res: express.Response) => {
   const city: string = req.params.city;
 
   if (!city) {
     return res.status(400).json({
       error: true,
-      messsage: "bad request data :("
+      messsage: 'bad request data :(',
     });
   }
 
-  let result: { degree: string; status: string };
-  let resultNotFound: boolean = false;
-  switch (city.toLowerCase()) {
-    case "nyc":
-      result = { degree: "18C", status: "foggy" };
-      break;
-    case "stockholm":
-      result = { degree: "8C", status: "windy" };
-      break;
-    case "san-francisco":
-      result = { degree: "14C", status: "rainy" };
-      break;
-    case "tokyo":
-      result = { degree: "21C", status: "sunny" };
-      break;
+  switch (_.toLower(city)) {
+    case 'nyc':
+      return res.json({ degree: '18C', status: 'foggy' });
+    case 'stockholm':
+      return res.json({ degree: '8C', status: 'windy' });
+    case 'san-francisco':
+      return res.json({ degree: '14C', status: 'rainy' });
+    case 'tokyo':
+      return res.json({ degree: '21C', status: 'sunny' });
     default:
-      resultNotFound = true;
-  }
-
-  if (resultNotFound) {
-    return res.json({
-      error: true,
-      messsage: "city name not found in DB :("
-    });
-  } else {
-    return res.json(result);
+      return res.json({
+        error: true,
+        messsage: 'city name not found in DB :(',
+      });
   }
 });
